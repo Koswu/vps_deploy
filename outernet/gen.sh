@@ -1,4 +1,4 @@
-#!/bin/bash -v
+#!/bin/bash
 
 SCRIPT_DIR=$(dirname $0)
 DEST_DIR=${1:-"$SCRIPT_DIR/out"}
