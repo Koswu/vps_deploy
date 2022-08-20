@@ -1,0 +1,6 @@
+#!/bin/sh
+
+read -p "请输入域名:" domain
+
+read -p "请输入 WebSocket 路径:" path
+
