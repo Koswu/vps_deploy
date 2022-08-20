@@ -25,7 +25,11 @@ export -f replace_var
 cp -r $SCRIPT_DIR/src/* $DEST_DIR
 
 
-find $DEST_DIR -name '*.in' | xargs bash -c 'replace_var "$@"' 
+for template_file in $(find $DEST_DIR -name '*.in')
+do
+	echo $template_file
+	replace_var $template_file
+done;
 
 echo "uuid = $uuid"
 
