@@ -8,7 +8,7 @@ read -p "请输入绑定的域名:" domain
 export domain
 read -p "请输入 ws 路径:" path
 export path
-uuid=$(uuidgen)
+uuid=$(cat /proc/sys/kernel/random/uuid)
 export uuid
 
 escape_path_slash() {
