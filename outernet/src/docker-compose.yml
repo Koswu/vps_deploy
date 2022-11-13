@@ -13,6 +13,7 @@ services:
         - $PWD/caddy/caddy_config:/config
   v2ray:
     image: "docker.io/v2fly/v2fly-core"
+    entrypoint: ["v2ray", "run", "-config=/etc/v2ray/config.json"]
     restart: unless-stopped
     volumes:
       - $PWD/v2ray/config.json:/etc/v2ray/config.json:ro
